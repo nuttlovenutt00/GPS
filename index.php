@@ -1,46 +1,46 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<p>Click the button to get your coordinates.</p>
+ <!DOCTYPE HTML>
+  <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Map Location Sample | Longdo Map</title>
+        <style type="text/css">
+          html{
+            height:100%; 
+          }
+          body{ 
+            margin:0px;
+            height:100%; 
+          }
+          #map {
+            height: 20%;
+            width: 50%
+          }
+        </style>
 
-<button onclick="getLocation()">Try It</button>
+        <script type="text/javascript" src="https://api.longdo.com/map/?key=05431d206b12178770f382c7a50f50a1 "></script>
+        <script>
+          function init() {
+            map = new longdo.Map({
+              placeholder: document.getElementById('map')
+            });
+            
+          }
+           
+          
 
-<p id="demo"></p>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-
-function showError(error) {
-  switch(error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation."
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable."
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request to get user location timed out."
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error occurred."
-      break;
-  }
-}
-</script>
-
-</body>
-</html>
+          function ghk(){
+            map.location(longdo.LocationMode.Geolocation);
+            var result = map.location();
+            console.log(result);
+            document.getElementById('show').value=result['lat']+","+result['lon'];
+          }
+        </script>
+    </head>
+    <body onload="init();">
+        <div id="map"></div>
+         <div id="map"></div>
+        <button onclick="ghk()">Geolocation</button>
+        <input type="text" value="" id="show">
+    </body>
+  </html>
