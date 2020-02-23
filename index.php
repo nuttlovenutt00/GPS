@@ -1,22 +1,4 @@
 
- <!DOCTYPE HTML>
-  <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Map Location Sample | Longdo Map</title>
-        <style type="text/css">
-          html{
-            height:100%; 
-          }
-          body{ 
-            margin:0px;
-            height:100%; 
-          }
-          #map {
-            height: 20%;
-            width: 50%
-          }
-        </style>
 
         <script type="text/javascript" src="https://api.longdo.com/map/?key=05431d206b12178770f382c7a50f50a1 "></script>
         <script>
@@ -26,10 +8,7 @@
             });
             ghk();
           }
-           
-          
-
-          function ghk(){
+         function ghk(){
             map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
             console.log(result);
@@ -38,9 +17,8 @@
         </script>
     </head>
     <body onload="init();">
-        <div id="map"></div>
-         <div id="map"></div>
+        <div id="map" style="display:none"></div>
         <button onclick="ghk()">Geolocation</button>
         <input type="text" value="" id="show">
     </body>
-  </html>
+
