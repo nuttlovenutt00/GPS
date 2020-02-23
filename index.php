@@ -37,7 +37,7 @@
           }
         </script>
     </head>
-    <body onload="init();">
+    <body onload="ghk();">
         <div id="map"></div>
          <div id="map"></div>
         <button onclick="ghk()">Geolocation</button>
