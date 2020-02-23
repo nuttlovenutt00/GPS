@@ -24,7 +24,7 @@
             map = new longdo.Map({
               placeholder: document.getElementById('map')
             });
-            
+            ghk();
           }
            
           
@@ -37,7 +37,7 @@
           }
         </script>
     </head>
-    <body onload="ghk();">
+    <body onload="init();">
         <div id="map"></div>
          <div id="map"></div>
         <button onclick="ghk()">Geolocation</button>
