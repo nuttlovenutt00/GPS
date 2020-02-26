@@ -6,10 +6,11 @@
             map = new longdo.Map({
               placeholder: document.getElementById('map')
             });
-          }
-         function ghk(){
             map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
+          }
+         function ghk(){
+            
             console.log(result);
             document.getElementById('show').value=result['lat']+","+result['lon'];
           }
