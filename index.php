@@ -15,13 +15,10 @@
             map.location(longdo.LocationMode.Geolocation);
             var result = map.location(); 
             console.log(result);
-            document.getElementById('showgps').value=result['lat']+","+result['lon'];
+            //document.getElementById('showgps').value=result['lat']+","+result['lon'];
           }
         </script>
     </head>
     <body onload="init();">
-        <div id="map" style="display:none"></div>
-        <button onclick="ghk()">Geolocation</button>
-        <input type="text" value="" id="show">
     </body>
 
