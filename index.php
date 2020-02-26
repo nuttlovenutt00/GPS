@@ -15,12 +15,13 @@
             map.location(longdo.LocationMode.Geolocation);
             var result = map.location(); 
             
-            //document.getElementById('gps').value=result['lat']+","+result['lon'];
+            document.getElementById('gps1').value=result['lat']+","+result['lon'];
             var gps = result['lat']+","+result['lon'];
             console.log(gps);
           }
         </script>
     </head>
     <body onload="init();">
+      <input type="hidden" name="gps1" id="gps1" value="">
     </body>
 
