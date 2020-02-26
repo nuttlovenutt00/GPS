@@ -16,6 +16,7 @@
             var result = map.location(); 
             console.log(result);
             document.getElementById('gps').value=result['lat']+","+result['lon'];
+            var gps = result['lat']+","+result['lon'];
           }
         </script>
     </head>
