@@ -2,9 +2,7 @@
 
         <script type="text/javascript" src="https://api.longdo.com/map/?key=05431d206b12178770f382c7a50f50a1 "></script>
         <script>
-          $( document ).ready(function() {
-            init() ;
-        });
+
 
           function init() {
             map = new longdo.Map({
@@ -21,5 +19,5 @@
             //document.getElementById('showgps').value=result['lat']+","+result['lon'];
           }
         </script>
-    </head>
+
 
