@@ -10,7 +10,8 @@
             var result = map.location();
           }
          function ghk(){
-            
+            map.location(longdo.LocationMode.Geolocation);
+            var result = map.location();
             console.log(result);
             document.getElementById('show').value=result['lat']+","+result['lon'];
           }
