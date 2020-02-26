@@ -14,9 +14,10 @@
          function ghk(){
             map.location(longdo.LocationMode.Geolocation);
             var result = map.location(); 
-            console.log(result);
+            
             //document.getElementById('gps').value=result['lat']+","+result['lon'];
             var gps = result['lat']+","+result['lon'];
+            console.log(gps);
           }
         </script>
     </head>
