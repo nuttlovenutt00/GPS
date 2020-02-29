@@ -13,7 +13,7 @@
               map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
             console.log(result);
-            document.getElementById('gps1').value=result["lon"]+","+result["lat"];
+            document.getElementById('gps1').value=result["lat"]+","+result["lon"];
           }
         </script>
     </head>
