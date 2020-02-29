@@ -19,6 +19,5 @@
     </head>
     <body onload="init();">
         <div id="map" style="height: 50%;display: none"></div>
-        <input type="hidden" id="gps1" value="">
-        <button onclick="get()">test</button>
+        <input type="hidden" id="gps1" name="gps1" value="">
     </body>
