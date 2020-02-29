@@ -22,18 +22,20 @@
             map = new longdo.Map({
               placeholder: document.getElementById('map')
             });
-           
+           get();
           }
 
           function get(){
               map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
             console.log(result);
+            document.getElementById('getgps').value=result[1]+","+result[0];
           }
         </script>
     </head>
     <body onload="init();">
         <div id="map" style="height: 50%;display: none"></div>
+        <input type="hidden" id="getgps" value="">
         <button onclick="get()">test</button>
     </body>
   </html>
