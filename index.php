@@ -29,7 +29,7 @@
               map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
             console.log(result);
-            document.getElementById('getgps').value=result[1]+","+result[0];
+            document.getElementById('getgps').value=result["lon"]+","+result["lat"];
           }
         </script>
     </head>
