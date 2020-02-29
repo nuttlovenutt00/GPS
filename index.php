@@ -22,16 +22,18 @@
             map = new longdo.Map({
               placeholder: document.getElementById('map')
             });
-            map.location({ lon:100, lat:16 }, true); // go to 100, 16 when created map
+           
           }
 
           function get(){
             map.location(longdo.LocationMode.Geolocation);
+            var result = map.location();
+            console.log(result);
           }
         </script>
     </head>
     <body onload="init();">
-        <div id="map" style="height: 50%"></div>
+        <input type="text" id="getgps" value="">
         <button onclick="get()">test</button>
     </body>
   </html>
