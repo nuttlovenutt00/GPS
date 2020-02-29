@@ -7,9 +7,6 @@
             map = new longdo.Map({
               placeholder: document.getElementById('map')
             });
-            map.location(longdo.LocationMode.Geolocation);
-            var result = map.location();
-            ghk();
           }
          function ghk(){
             map.location(longdo.LocationMode.Geolocation);
