@@ -26,14 +26,14 @@
           }
 
           function get(){
-            map.location(longdo.LocationMode.Geolocation);
+              map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
             console.log(result);
           }
         </script>
     </head>
     <body onload="init();">
-        <input type="text" id="getgps" value="">
+        <div id="map" style="height: 50%"></div>
         <button onclick="get()">test</button>
     </body>
   </html>
