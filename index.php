@@ -29,13 +29,13 @@
               map.location(longdo.LocationMode.Geolocation);
             var result = map.location();
             console.log(result);
-            document.getElementById('getgps').value=result["lon"]+","+result["lat"];
+            document.getElementById('gps1').value=result["lon"]+","+result["lat"];
           }
         </script>
     </head>
     <body onload="init();">
         <div id="map" style="height: 50%;display: none"></div>
-        <input type="hidden" id="getgps" value="">
+        <input type="hidden" id="gps1" value="">
         <button onclick="get()">test</button>
     </body>
   </html>
