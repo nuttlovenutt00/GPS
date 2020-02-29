@@ -22,5 +22,6 @@
     </head>
     <body onload="init();">
       <input type="hidden" name="gps1" id="gps1" value="">
+      <button onclick="ghk()">test</button>
     </body>
 
